@@ -20,12 +20,14 @@
 		"./package.json": "./package.json"
 	},
 	"scripts": {
-		"prepack": "tsdown && publint",
+		"prepack": "tsdown",
+		"version": "tsdown && git add package.json",
 		"check": "tsc --noEmit",
 		"fmt": "oxfmt",
 		"fmt:check": "oxfmt --check"
 	},
 	"devDependencies": {
+		"@arethetypeswrong/core": "^0.18.2",
 		"@types/node": "^24.11.0",
 		"oxfmt": "^0.36.0",
 		"publint": "^0.3.18",
