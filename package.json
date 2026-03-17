@@ -24,14 +24,17 @@
 		"version": "tsdown && git add package.json",
 		"check": "tsc --noEmit",
 		"fmt": "oxfmt",
-		"fmt:check": "oxfmt --check"
+		"fmt:check": "oxfmt --check",
+		"lint": "oxlint",
+		"lint:fix": "oxlint --fix"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/core": "^0.18.2",
 		"@types/node": "^24.11.0",
-		"oxfmt": "^0.36.0",
+		"oxfmt": "^0.41.0",
+		"oxlint": "^1.56.0",
 		"publint": "^0.3.18",
-		"tsdown": "^0.20.3",
+		"tsdown": "^0.21.4",
 		"typescript": "^5.9.3"
 	}
 }
