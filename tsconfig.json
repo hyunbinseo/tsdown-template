@@ -1,28 +1,42 @@
 {
-	"include": ["src"],
 	"compilerOptions": {
-		"declaration": true,
-		"emitDeclarationOnly": true,
-		"esModuleInterop": true,
-		"isolatedModules": true,
-		"lib": ["es2023"],
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"resolveJsonModule": true,
-		"rewriteRelativeImportExtensions": true,
-		"skipLibCheck": true,
-		"strict": true,
+		// File Layout
+		"outDir": "./dist",
+
+		// Environment Settings
+		"module": "nodenext",
 		"target": "esnext",
+		"lib": ["esnext"],
 		"types": ["node"],
-		"verbatimModuleSyntax": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
+
+		// Other Outputs
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+
+		// Stricter Typechecking Options
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
+
+		// Style Options
+		"noImplicitReturns": true,
+		"noImplicitOverride": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noPropertyAccessFromIndexSignature": true,
+
+		// Added
 		"allowUnreachableCode": false,
-		"allowUnusedLabels": false
+		"allowUnusedLabels": false,
+
+		// Recommended Options
+		"strict": true,
+		"jsx": "react-jsx",
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "force",
+		"skipLibCheck": true
 	}
 }
