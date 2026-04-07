@@ -1,8 +1,5 @@
 {
 	"compilerOptions": {
-		// File Layout
-		"outDir": "./dist",
-
 		// Environment Settings
 		"module": "nodenext",
 		"target": "esnext",
@@ -10,9 +7,7 @@
 		"types": ["node"],
 
 		// Other Outputs
-		"sourceMap": true,
-		"declaration": true,
-		"declarationMap": true,
+		"noEmit": true,
 
 		// Stricter Typechecking Options
 		"noUncheckedIndexedAccess": true,
@@ -27,6 +22,7 @@
 		"noPropertyAccessFromIndexSignature": true,
 
 		// Added
+		"allowImportingTsExtensions": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
 
