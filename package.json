@@ -21,7 +21,6 @@
 	"scripts": {
 		"prepack": "tsdown",
 		"version": "tsdown && git add package.json",
-		"check": "tsc --noEmit",
 		"fmt": "oxfmt",
 		"fmt:check": "oxfmt --check",
 		"lint": "oxlint",
@@ -31,7 +30,8 @@
 		"@arethetypeswrong/core": "^0.18.5",
 		"@types/node": "^24.13.3",
 		"oxfmt": "^0.59.0",
-		"oxlint": "^1.74.0",
+		"oxlint": "^1.75.0",
+		"oxlint-tsgolint": "^7.0.2001",
 		"publint": "^0.3.21",
 		"tsdown": "^0.22.8",
 		"typescript": "^7.0.2"
