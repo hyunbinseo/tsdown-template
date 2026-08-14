@@ -4,6 +4,7 @@
 	"quoteProps": "consistent",
 	"singleQuote": true,
 	"sortImports": { "newlinesBetween": false },
+	"sortPackageJson": true,
 	"trailingComma": "all",
 	"useTabs": true
 }
