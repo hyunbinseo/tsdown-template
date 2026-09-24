@@ -1,11 +1,25 @@
+## Set Minimum Runtimes
+
+Adjust and explicitly set [`target`](https://tsdown.dev/options/target) and `platform` in `tsdown.config.ts`.
+
+> [!IMPORTANT]
+> `tsconfig.json`'s `lib` and `types` are static.
+>
+> - They are not derived from `package.json` `engines` or `tsdown.config.ts` `target`.
+> - tsdown lowers syntax but does not polyfill APIs, so unsupported APIs can still type-check.
+
+> [!NOTE]
+> For non-browser environments, set `package.json` `engines` and match `@types/node`'s major version to the minimum Node.js version.
+
 ## Optional `package.json` Fields
 
-```json
+```jsonc
 {
 	"license": "MIT",
 	"sideEffects": false,
 	"imports": { "#src/*": "./src/*" },
-	"publishConfig": { "access": "public" }
+	"publishConfig": { "access": "public" },
+	"engines": { "node": ">=24" }, // match `tsdown.config.ts` target
 }
 ```
 
