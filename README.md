@@ -1,15 +1,14 @@
 ## Set Minimum Runtimes
 
-Adjust and explicitly set [`target`](https://tsdown.dev/options/target) and `platform` in `tsdown.config.ts`.
+- Explicitly set [`target`](https://tsdown.dev/options/target) and `platform` in `tsdown.config.ts`.
+- For non-browser runtimes, set `package.json`'s `engines` (e.g. `"node": ">=24"`) and pin types to that major (e.g. `@types/node@24`).
 
 > [!IMPORTANT]
-> `tsconfig.json`'s `lib` and `types` are static.
+> `tsconfig.json`'s `target`, `lib`, and `types` are static.
 >
-> - They are not derived from `package.json` `engines` or `tsdown.config.ts` `target`.
+> - Keep `target` at `esnext`; tsdown still reads it for `useDefineForClassFields`.
+> - `lib` and `types` are not derived from `package.json`'s `engines` or `tsdown.config.ts`'s `target`.
 > - tsdown lowers syntax but does not polyfill APIs, so unsupported APIs can still type-check.
-
-> [!NOTE]
-> For non-browser environments, set `package.json` `engines` and match `@types/node`'s major version to the minimum Node.js version.
 
 ## Optional `package.json` Fields
 
@@ -19,7 +18,6 @@ Adjust and explicitly set [`target`](https://tsdown.dev/options/target) and `pla
 	"sideEffects": false,
 	"imports": { "#src/*": "./src/*" },
 	"publishConfig": { "access": "public" },
-	"engines": { "node": ">=24" }, // match `tsdown.config.ts` target
 }
 ```
 
