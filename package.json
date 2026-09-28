@@ -19,8 +19,8 @@
 		"./package.json": "./package.json"
 	},
 	"scripts": {
-		"prepack": "tsdown",
-		"version": "tsdown && git add package.json",
+		"prepack": "tsc && tsdown",
+		"version": "tsc && tsdown && git add package.json",
 		"fmt": "oxfmt",
 		"fmt:check": "oxfmt --check",
 		"lint": "oxlint",
