@@ -3,8 +3,14 @@
 		// Environment Settings
 		"module": "nodenext",
 		"target": "esnext",
-		"lib": ["esnext"],
-		"types": ["node"],
+		"lib": [
+			"esnext",
+			// cross-runtime web APIs (e.g. fetch, URL)
+			// also adds worker-only globals (e.g. self)
+			// for browser-only libraries, use "dom" instead
+			"webworker"
+		],
+		"types": [],
 
 		// Other Outputs
 		"noEmit": true,
